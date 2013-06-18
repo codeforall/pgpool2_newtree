@@ -1,4 +1,4 @@
-AM_CPPFLAGS = -D_GNU_SOURCE -I $(top_srcdir)/src/include -I -I @PGSQL_INCLUDE_DIR@
+AM_CPPFLAGS = -D_GNU_SOURCE -I $(top_srcdir)/src/include -I @PGSQL_INCLUDE_DIR@
 
 lib_LTLIBRARIES = libpcp.la
 libpcp_la_SOURCES = pcp.c pcp_stream.c pcp_error.c $(top_srcdir)/src/utils/md5.c

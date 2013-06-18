@@ -1,6 +1,6 @@
 AUTOMAKE_OPTIONS = subdir-objects
 libs_dir = $(top_srcdir)/src/libs
-INCLUDES = -I $(top_srcdir)/src/include
+AM_CPPFLAGS = -D_GNU_SOURCE -I $(top_srcdir)/src/include -I @PGSQL_INCLUDE_DIR@
 bin_PROGRAMS = pgpool
 
 pgpool_SOURCES = main/main.c user_end/child.c server_end/pool_auth.c \
@@ -55,7 +55,6 @@ pkgdata_DATA = sql/insert_lock.sql \
 			   sql/system_db.sql \
 			   sample/pgpool.pam
 
-AM_CPPFLAGS = -D_GNU_SOURCE -I @PGSQL_INCLUDE_DIR@
 
 # suggested by libtoolize
 #ACLOCAL_AMFLAGS = -I m4

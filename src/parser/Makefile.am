@@ -1,4 +1,4 @@
-INCLUDES = -I../include/parser
+AM_CPPFLAGS = -D_GNU_SOURCE -I $(top_srcdir)/src/include/parser -I @PGSQL_INCLUDE_DIR@
 noinst_LIBRARIES = libsql-parser.a
 
 libsql_parser_a_SOURCES  = \
@@ -42,7 +42,6 @@ libsql_parser_a_SOURCES  = \
 
 EXTRA_DIST = scan.c scan.l
 
-AM_CPPFLAGS = -D_GNU_SOURCE -I .. -I @PGSQL_INCLUDE_DIR@
 
 AM_YFLAGS = -d
 

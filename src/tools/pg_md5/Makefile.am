@@ -1,5 +1,4 @@
-INCLUDES = -I $(top_srcdir)/src/include
-
+AM_CPPFLAGS = -D_GNU_SOURCE -I $(top_srcdir)/src/include -I @PGSQL_INCLUDE_DIR@
 bin_PROGRAMS = pg_md5
 
 pg_md5_SOURCES = pg_md5.c \

@@ -204,7 +204,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-INCLUDES = -I $(top_srcdir)/src/include
+AM_CPPFLAGS = -D_GNU_SOURCE -I $(top_srcdir)/src/include -I @PGSQL_INCLUDE_DIR@
 pg_md5_SOURCES = pg_md5.c \
 				$(top_srcdir)/src/utils/md5.c \
 		    	$(top_srcdir)/src/utils/pool_error.c \
